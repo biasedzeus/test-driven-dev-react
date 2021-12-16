@@ -42,6 +42,18 @@ describe("Sign Up Page", () => {
         expect(input.type).toBe('password');
  
      })
+     it("has repeat password input",()=>{
+        render(<SignUpPage/>);
+        const input = screen.getByLabelText("Password Repeat");
+        expect(input).toBeInTheDocument();
+ 
+     })
+     it("has repeat password input type : passwrd",()=>{
+        render(<SignUpPage/>);
+        const input = screen.getByLabelText("Password Repeat");
+        expect(input.type).toBe('password');
+ 
+     })
   });
 }); 
 

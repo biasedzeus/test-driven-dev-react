@@ -9,6 +9,8 @@
          <input id='email'   type="text"/>
          <label htmlFor="password">Password</label>
          <input id='password'   type="password"/>
+         <label htmlFor="password-repeat">Password Repeat</label>
+         <input id='password-repeat'   type="password"/>
 
      </div>
      
