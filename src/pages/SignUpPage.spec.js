@@ -2,6 +2,7 @@
 import SignUpPage from './SignUpPage';
 import '@testing-library/jest-dom/extend-expect'; 
 import {render,screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event'
 
 
 
@@ -65,6 +66,19 @@ describe("Sign Up Page", () => {
         expect(button).toBeDisabled();
       });
   });
+
+  describe("Tnteractions",() => {
+      it("button enables when  pswd inputs populated",() => {
+          render(<SignUpPage/>)
+          const passwordInput = screen.getByLabelText('Password');
+          const passwordRepInput = screen.getByLabelText('Password Repeat');
+          userEvent.type(passwordInput,"P4assword");
+          userEvent.type(passwordRepInput,"P4assword");
+          const button = screen.queryByRole('button',{name:'Sign Up'});
+          expect(button).toBeEnabled();
+
+      })
+  })
 }); 
 
 

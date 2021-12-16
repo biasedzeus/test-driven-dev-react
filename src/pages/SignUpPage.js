@@ -1,6 +1,17 @@
  import React from 'react'
  
  function SignUpPage() {
+
+   let disabled = f;
+   setTimeout(()=>{
+     console.log("updating")
+   },1000)
+
+
+    
+
+
+
      return  <div>
          <h1>Sign Up</h1>
          <label htmlFor="username">UserName</label>
@@ -11,7 +22,7 @@
          <input id='password'   type="password"/>
          <label htmlFor="password-repeat">Password Repeat</label>
          <input id='password-repeat'   type="password"/>
-         <button disabled={true}>Sign Up</button>
+         <button disabled={disabled}>Sign Up</button>
 
      </div>
      
