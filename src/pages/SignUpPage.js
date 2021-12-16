@@ -1,11 +1,30 @@
- import React from 'react'
+ import React,{useState} from 'react'
  
  function SignUpPage() {
+  
+const [disabled, setDisabled] = useState(true);
+const [password, setPassword] = useState('');
+const [passwordRepeat, setPasswordRepeat] = useState('');
 
-   let disabled = f;
-   setTimeout(()=>{
-     console.log("updating")
-   },1000)
+  //  setTimeout(()=>{
+  //    console.log("updating");
+  //    setDisabled(false);
+
+  //  },5000)
+  function onChangePassword(event){
+    const currentValue = event.target.value;
+    setPassword(currentValue);
+    setDisabled(currentValue !== passwordRepeat)
+
+    
+
+  }
+  function onChangePasswordRepeat(event){
+    const currentValue = event.target.value;
+    setPasswordRepeat(currentValue);
+    setDisabled(currentValue !== password)
+
+  }
 
 
     
@@ -19,9 +38,9 @@
          <label htmlFor="email">Email</label>
          <input id='email'   type="text"/>
          <label htmlFor="password">Password</label>
-         <input id='password'   type="password"/>
+         <input id='password'   type="password" onChange={onChangePassword}/>
          <label htmlFor="password-repeat">Password Repeat</label>
-         <input id='password-repeat'   type="password"/>
+         <input id='password-repeat'   type="password" onChange={onChangePasswordRepeat}/>
          <button disabled={disabled}>Sign Up</button>
 
      </div>
