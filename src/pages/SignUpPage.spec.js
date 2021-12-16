@@ -20,13 +20,13 @@ describe("Sign Up Page", () => {
     });
     it("has username input",()=>{
        render(<SignUpPage/>);
-       const input = screen.getByPlaceholderText("username");
+       const input = screen.getByLabelText("UserName");
        expect(input).toBeInTheDocument();
 
     })
     it("has email input",()=>{
         render(<SignUpPage/>);
-        const input = screen.getByPlaceholderText("email");
+        const input = screen.getByLabelText("Email");
         expect(input).toBeInTheDocument();
  
      })

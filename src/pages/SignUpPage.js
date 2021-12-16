@@ -3,8 +3,10 @@
  function SignUpPage() {
      return  <div>
          <h1>Sign Up</h1>
-         <input placeholder='username' type="text"/>
-         <input placeholder='email'   type="text"/>
+         <label htmlFor="username">UserName</label>
+         <input id="username" type="text"/>
+         <label htmlFor="email">Email</label>
+         <input id='email'   type="text"/>
 
      </div>
      
