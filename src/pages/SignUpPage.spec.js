@@ -59,6 +59,11 @@ describe("Sign Up Page", () => {
         const button = screen.queryByRole("button", { name: "Sign Up" });
         expect(button).toBeInTheDocument();
       });
+      it("has SignUp Button disabled initially", () => {
+        render(<SignUpPage />);
+        const button = screen.queryByRole("button", { name: "Sign Up" });
+        expect(button).toBeDisabled();
+      });
   });
 }); 
 
