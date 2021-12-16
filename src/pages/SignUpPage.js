@@ -11,6 +11,7 @@
          <input id='password'   type="password"/>
          <label htmlFor="password-repeat">Password Repeat</label>
          <input id='password-repeat'   type="password"/>
+         <button>Sign Up</button>
 
      </div>
      

@@ -53,7 +53,12 @@ describe("Sign Up Page", () => {
         const input = screen.getByLabelText("Password Repeat");
         expect(input.type).toBe('password');
  
-     })
+     });
+     it("has SignUp Button", () => {
+        render(<SignUpPage />);
+        const button = screen.queryByRole("button", { name: "Sign Up" });
+        expect(button).toBeInTheDocument();
+      });
   });
 }); 
 
